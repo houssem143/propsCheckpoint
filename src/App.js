@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Component from './profile/Component';
 
 function App() {
+  let fullName= 'Houssem Mguidich';
+  let bio = 'I have good vibes';
+  let profession = 'developper'
+  let handleName = (x) => {
+    alert (`The user name is ${x} `)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Component name={fullName} bio={bio} job={profession} handleName={handleName}>
+    <img src='https://audreytips.com/wp-content/uploads/2018/09/18-sites-de-photos-gratuites-libres-de-droit-a-usage-commercial-1.jpg' alt='photo' />
+  
+  </Component>
     </div>
   );
 }
